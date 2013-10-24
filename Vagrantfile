@@ -29,7 +29,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
     config.vm.network :public_network, :bridge => 'eth1'  
-
+ 
+  #  Vagrant plugin that configures the virtual machine to use proxies
+  #  http://tmatilai.github.io/vagrant-proxyconf/
 
     config.proxy.http     = "http://10.60.2.251:3128/"
     config.proxy.https    = "http://10.60.2.251:3128/"
